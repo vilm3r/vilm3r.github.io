@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      html {
+        background-color: #3c3938;
+        color: #ffffff;
+        font-family: 'Roboto Slab', serif;
+        font-weight: 800;
+        font-size: 6rem;
+        text-transform: uppercase;
+      }
+
+      main{
+        padding: 1em;
+      }
+
+      a {
+        color: #ffffff;
+      }
+
+      a:visited {
+        color: #60EFFF;
+      }
+
+      @keyframes move-bg {
+        to {
+          background-position: var(--bg-size) 0;
+        }
+      }
+
+      .text-highlight {
+        --bg-size: 400%;
+        --color-one: #00FF87;
+        --color-two: #60EFFF;
+        background: linear-gradient(
+            90deg,
+            var(--color-one),
+            var(--color-two),
+            var(--color-one)
+          )
+          0 0 / var(--bg-size) 100%;
+        font-style: normal;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        animation: move-bg 8s infinite linear;
+      }
+
+      @media (max-width: 900px) {
+        html {
+            font-size: 3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      I'm <i class="text-highlight">vilm3r</i>. Check out my projects
+      <a href="https://github.com/vilm3r">here</a>
+    </main>
+  </body>
+</html>
